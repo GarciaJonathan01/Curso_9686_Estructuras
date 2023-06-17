@@ -8,26 +8,33 @@
  ********************************************************************************/
 #if !defined(__Class_Diagram_1_Nodo_h)
 #define __Class_Diagram_1_Nodo_h
-template<typename T>
-class Nodo
-{
+#ifndef NODO_H
+#define NODO_H
+
+template <class T>
+class Nodo {
 public:
-   Nodo* getAnterior(void);
-   void setAnterior(Nodo* newAnterior);
-   Nodo* getSiguiente(void);
-   void setSiguiente(Nodo* newSiguiente);
-   Nodo(T* valor);
-   ~Nodo();
+    Nodo(T dato);
+    ~Nodo();
 
-   T* getValor(void);
-   void setValor(T* newValor);
+    T getDato() const;
+    Nodo<T>* getSiguiente() const;
+    Nodo<T>* getAnterior() const;
 
-protected:
+    void setDato(T nuevoDato);
+    void setSiguiente(Nodo<T>* nuevoSiguiente);
+    void setAnterior(Nodo<T>* nuevoAnterior);
+
 private:
-   Nodo* anterior;
-   Nodo* siguiente;
-   T* valor;
+    T dato;
+    Nodo<T>* siguiente;
+    Nodo<T>* anterior;
 };
+
+#include "Nodo.cpp"
+
+#endif  // NODO_H
+
 #endif
 
 #endif

@@ -6,7 +6,8 @@
  * Modified: sabado, 17 de junio de 2023 
  * Purpose: Modelado de Sistema para Control de Asistencia y su Implementacion  
  ********************************************************************************/
-
+#include <ctime> 
+#include <locale>
 #include "fecha.h"
 
 ////////////////////////////////////////////////////////////////////////
@@ -161,6 +162,22 @@ void fecha::setAnio(int newAnio)
 
 fecha::fecha()
 {
+    // Establece la configuración regional en español
+    setlocale(LC_ALL, "es_ES.UTF-8");
+
+    // Obtiene el tiempo actual del sistema
+    std::time_t tiempoActual = std::time(nullptr);
+
+    // Convierte el tiempo en una estructura tm
+    std::tm* tiempoLocal = std::localtime(&tiempoActual);
+
+    // Obtiene los componentes de fecha y hora
+    this->dia = tiempoLocal->tm_mday;
+    this->mes = tiempoLocal->tm_mon+1;
+    this->anio = tiempoLocal->tm_year + 1900;
+    this->hora = tiempoLocal->tm_hour;
+    this->minuto = tiempoLocal->tm_min;
+    this->segundo = tiempoLocal->tm_sec;
 }
 
 ////////////////////////////////////////////////////////////////////////

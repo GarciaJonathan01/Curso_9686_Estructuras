@@ -74,10 +74,12 @@ void listaDobleCircular<T>::imprimirDatos() {
 
     do {
         // Imprimir el dato del nodo actual
-        // ...
+        std::cout << actual->getDato() << " ";
 
         actual = actual->getSiguiente();
     } while (actual != primero);
+
+    std::cout << std::endl;
 }
 
 template <class T>

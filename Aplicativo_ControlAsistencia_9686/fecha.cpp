@@ -173,11 +173,33 @@ fecha::fecha()
 
     // Obtiene los componentes de fecha y hora
     this->dia = tiempoLocal->tm_mday;
-    this->mes = tiempoLocal->tm_mon+1;
+    this->mes = tiempoLocal->tm_mon + 1;
     this->anio = tiempoLocal->tm_year + 1900;
     this->hora = tiempoLocal->tm_hour;
     this->minuto = tiempoLocal->tm_min;
     this->segundo = tiempoLocal->tm_sec;
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       fecha::fecha(int anio, int mes, int dia, int hora, int minuto, int segundo)
+// Purpose:    Implementation of fecha::fecha()
+// Parameters:
+// - anio
+// - mes
+// - dia
+// - hora
+// - minuto
+// - segundo
+// Return:
+////////////////////////////////////////////////////////////////////////
+
+fecha::fecha(int anio, int mes, int dia, int hora, int minuto, int segundo) {
+	this->dia = dia;
+	this->mes = mes;
+    this->anio = anio;
+    this->hora = hora;
+    this->minuto = minuto;
+    this->segundo = segundo;
 }
 
 ////////////////////////////////////////////////////////////////////////

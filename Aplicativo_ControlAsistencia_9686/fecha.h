@@ -26,6 +26,7 @@ public:
    int getAnio(void);
    void setAnio(int newAnio);
    fecha();
+   fecha(int, int, int, int, int, int);
    ~fecha();
 	//void obtenerFechaDeNacimiento();
 protected:

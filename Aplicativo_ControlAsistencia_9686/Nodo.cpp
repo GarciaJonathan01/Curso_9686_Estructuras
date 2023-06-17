@@ -16,7 +16,8 @@
 // Return:     Nodo
 ////////////////////////////////////////////////////////////////////////
 
-Nodo* Nodo::getAnterior(void)
+template<typename T>
+Nodo<T>* Nodo<T>::getAnterior(void)
 {
    return anterior;
 }
@@ -29,7 +30,8 @@ Nodo* Nodo::getAnterior(void)
 // Return:     void
 ////////////////////////////////////////////////////////////////////////
 
-void Nodo::setAnterior(Nodo* newAnterior)
+template<typename T>
+void Nodo<T>::setAnterior(Nodo<T>* newAnterior)
 {
    anterior = newAnterior;
 }
@@ -40,7 +42,8 @@ void Nodo::setAnterior(Nodo* newAnterior)
 // Return:     Nodo
 ////////////////////////////////////////////////////////////////////////
 
-Nodo* Nodo::getSiguiente(void)
+template<typename T>
+Nodo<T>* Nodo<T>::getSiguiente(void)
 {
    return siguiente;
 }
@@ -53,11 +56,29 @@ Nodo* Nodo::getSiguiente(void)
 // Return:     void
 ////////////////////////////////////////////////////////////////////////
 
-void Nodo::setSiguiente(Nodo* newSiguiente)
+template<typename T>
+void Nodo<T>::setSiguiente(Nodo<T>* newSiguiente)
 {
    siguiente = newSiguiente;
 }
 
+
+
+
+template<typename T>
+void Nodo<T>::setValor(T* newValor)
+{
+   valor = newValor;
+}
+
+
+template<typename T>
+Nodo<T>::Nodo(T* valor)
+{
+    this->valor = valor;
+    anterior = nullptr;
+    siguiente = nullptr;
+}
 ////////////////////////////////////////////////////////////////////////
 // Name:       Nodo::Nodo(Persona persona)
 // Purpose:    Implementation of Nodo::Nodo()
@@ -79,7 +100,8 @@ Nodo::Nodo(Persona* persona)
 // Return:     
 ////////////////////////////////////////////////////////////////////////
 
-Nodo::~Nodo()
+template<typename T>
+Nodo<T>::~Nodo()
 {
-   // TODO : implement
+   // TODO: implement
 }

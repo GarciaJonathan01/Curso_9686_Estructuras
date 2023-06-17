@@ -49,6 +49,11 @@ std::string Persona::getNombre(void)
    return nombre;
 }
 
+std::string Persona::getFechaNacimiento(void)
+{
+   return fechaNacimiento;
+}
+
 ////////////////////////////////////////////////////////////////////////
 // Name:       Persona::setNombre(std::string newNombre)
 // Purpose:    Implementation of Persona::setNombre()
@@ -94,9 +99,17 @@ void Persona::setApellido(std::string newApellido)
 
 Persona::Persona()
 {
-   registro = NULL;
-   fecha = NULL;
+   //registro = NULL;
+   //fecha = NULL;
 }
+
+Persona::Persona(std::string cedula,std::string nombre,std::string apellido, std::string fechaNacimiento){
+	this->cedula=cedula;
+	this->nombre=nombre;
+	this->apellido=apellido;
+	this->fechaNacimiento=fechaNacimiento;
+}
+
 
 ////////////////////////////////////////////////////////////////////////
 // Name:       Persona::~Persona()

@@ -10,10 +10,18 @@
 #include "Nodo.h"
 
 template <class T>
-Nodo<T>::Nodo(T dato) : dato(dato), siguiente(nullptr), anterior(nullptr) {}
+Nodo<T>::Nodo(){}
+
 
 template <class T>
-Nodo<T>::~Nodo() {}
+Nodo<T>::Nodo(T dato) {
+	this->dato = dato;
+	this->siguiente = nullptr;
+	this->anterior = nullptr;
+}
+
+template <class T>
+Nodo<T>::~Nodo(){}
 
 template <class T>
 T Nodo<T>::getDato() const {

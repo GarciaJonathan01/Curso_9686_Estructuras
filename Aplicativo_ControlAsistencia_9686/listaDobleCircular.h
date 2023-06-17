@@ -6,35 +6,29 @@
  * Modified: sabado, 17 de junio de 2023 
  * Purpose: Modelado de Sistema para Control de Asistencia y su Implementacion  
  ********************************************************************************/
-
-#if !defined(__Class_Diagram_1_listaDobleCircular_h)
-#define __Class_Diagram_1_listaDobleCircular_h
-
 #ifndef LISTADOBLECIRCULAR_H
 #define LISTADOBLECIRCULAR_H
 
 #include "Nodo.h"
+#include <iostream>
 
 template <class T>
 class listaDobleCircular {
+	
+private:
+    Nodo<T>* primero;
+    Nodo<T>* ultimo;
 public:
     listaDobleCircular();
     ~listaDobleCircular();
 
-    void insertar(T dato);
-    void eliminar(T dato);
-    void imprimirDatos();
+    void insertar(T);
+    void eliminar(T);
+    void imprimirDatos(); //AÚN NO SE CÓMO ES
     int cantidadNodos() const;
     T buscarPorCedula(std::string cedula);
-
-private:
-    Nodo<T>* primero;
-    Nodo<T>* ultimo;
 };
 
-#include "listaDobleCircular.cpp"
 
 #endif  // LISTADOBLECIRCULAR_H
 
-
-#endif

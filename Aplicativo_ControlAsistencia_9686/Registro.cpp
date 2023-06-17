@@ -6,7 +6,7 @@
  * Modified: sabado, 17 de junio de 2023 
  * Purpose: Modelado de Sistema para Control de Asistencia y su Implementacion  
  ********************************************************************************/
-
+/*
 #include "fecha.h"
 #include "Registro.h"
 #include <string>
@@ -109,4 +109,4 @@ void Registro::insertarEntrada(Persona persona, fecha fecha)
 void Registro::insertarSalida(Persona persona, fecha fecha)
 {
    // TODO : implement
-}
+}*/

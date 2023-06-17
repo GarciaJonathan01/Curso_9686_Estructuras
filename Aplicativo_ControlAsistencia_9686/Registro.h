@@ -6,7 +6,7 @@
  * Modified: sabado, 17 de junio de 2023 
  * Purpose: Modelado de Sistema para Control de Asistencia y su Implementacion  
  ********************************************************************************/
-
+/*
 #if !defined(__Class_Diagram_1_Registro_h)
 #define __Class_Diagram_1_Registro_h
 
@@ -41,3 +41,4 @@ private:
 };
 
 #endif
+*/

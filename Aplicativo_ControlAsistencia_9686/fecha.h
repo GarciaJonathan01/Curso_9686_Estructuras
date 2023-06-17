@@ -27,7 +27,7 @@ public:
    void setAnio(int newAnio);
    fecha();
    ~fecha();
-
+	//void obtenerFechaDeNacimiento();
 protected:
 private:
    int hora;

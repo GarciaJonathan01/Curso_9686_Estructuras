@@ -9,7 +9,10 @@
 #include "listaDobleCircular.h"
 
 template <class T>
-listaDobleCircular<T>::listaDobleCircular() : primero(nullptr), ultimo(nullptr) {}
+listaDobleCircular<T>::listaDobleCircular() {
+	this->primero = nullptr;
+	this->ultimo = nullptr;
+}
 
 template <class T>
 listaDobleCircular<T>::~listaDobleCircular() {
@@ -17,24 +20,19 @@ listaDobleCircular<T>::~listaDobleCircular() {
 }
 
 template <class T>
+void listaDobleCircular<T>::insertar(T dato) {
 ///////////////////////////////////////////////////////////////////////
 // Purpose: Inserta un nuevo nodo al principio de la lista
 // Return: void
 ////////////////////////////////////////////////////////////////////////
-void listaDobleCircular<T>::insertar(T dato) {
-    Nodo<T>* nuevoNodo = new Nodo<T>(dato);
-
+	Nodo<T>* nuevo = new Nodo<T>(dato);
     if (primero == nullptr) {
-        primero = nuevoNodo;
-        ultimo = nuevoNodo;
-        nuevoNodo->setSiguiente(nuevoNodo);
-        nuevoNodo->setAnterior(nuevoNodo);
+        primero = nuevo;
+        ultimo = nuevo;
     } else {
-        nuevoNodo->setSiguiente(primero);
-        nuevoNodo->setAnterior(ultimo);
-        primero->setAnterior(nuevoNodo);
-        ultimo->setSiguiente(nuevoNodo);
-        primero = nuevoNodo;
+        ultimo->setSiguiente(nuevo);
+        nuevo->setAnterior(ultimo);
+        ultimo = nuevo;
     }
 }
 
@@ -44,32 +42,27 @@ void listaDobleCircular<T>::eliminar(T dato) {
 // Purpose: Elimina un nodo que contiene el valor dado de la lista
 // Return: void
 ////////////////////////////////////////////////////////////////////////
-    if (primero == nullptr) {
-        return;  // La lista está vacía, no hay nada que eliminar
-    }
+    Nodo<T>* nodo = buscar(dato);
 
-    Nodo<T>* actual = primero;
-
-    while (actual->getDato() != dato && actual->getSiguiente() != primero) {
-        actual = actual->getSiguiente();
-    }
-
-    if (actual->getDato() == dato) {
-        Nodo<T>* siguienteNodo = actual->getSiguiente();
-        Nodo<T>* anteriorNodo = actual->getAnterior();
-
-        siguienteNodo->setAnterior(anteriorNodo);
-        anteriorNodo->setSiguiente(siguienteNodo);
-
-        if (actual == primero) {
-            primero = siguienteNodo;
+    if (nodo != nullptr) {
+        if (nodo == primero && nodo == ultimo) {
+            primero = nullptr;
+            ultimo = nullptr;
+        } else if (nodo == primero) {
+            primero = nodo->getSiguiente();
+            primero->setAnterior(nullptr);
+        } else if (nodo == ultimo) {
+            ultimo = nodo->getAnterior();
+            ultimo->setSiguiente(nullptr);
+        } else {
+            nodo->getAnterior()->setSiguiente(nodo->getSiguiente());
+            nodo->getSiguiente()->setAnterior(nodo->getAnterior());
         }
-        if (actual == ultimo) {
-            ultimo = anteriorNodo;
-        }
-
-        delete actual;
-    }
+        delete nodo;
+        std::cout << "Elemento eliminado correctamente." << std::endl;
+    } else {
+        std::cout << "Elemento no encontrado." << std::endl;
+    } 
 }
 
 template <class T>
@@ -100,15 +93,19 @@ int listaDobleCircular<T>::cantidadNodos() const {
 // Purpose: Devuelve el número de nodos en la lista
 // Return: int
 ////////////////////////////////////////////////////////////////////////
+    int count = 0;
+
     if (primero == nullptr) {
-        return 0;  // La lista está vacía
+        return count;  // La lista está vacía
     }
 
-    int contador = 0;
     Nodo<T>* actual = primero;
 
     do {
-        contador++;
+        count++;
         actual = actual->getSiguiente();
-    } while (
+    } while (actual != primero);
+
+    return count;
+}
 

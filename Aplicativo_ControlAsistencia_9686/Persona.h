@@ -6,15 +6,20 @@
  * Modified: sabado, 17 de junio de 2023 
  * Purpose: Modelado de Sistema para Control de Asistencia y su Implementacion  
  ********************************************************************************/
+#pragma once
+//#include "Registro.h"
+//#include "fecha.h"
 
-#if !defined(__Class_Diagram_1_Persona_h)
-#define __Class_Diagram_1_Persona_h
-
-class Registro;
-class fecha;
+#include <iostream>
 
 class Persona
 {
+private:
+   std::string cedula;
+   std::string nombre;
+   std::string apellido;
+   std::string fechaNacimiento;
+   //fecha fechaDeNacimiento;
 public:
    std::string getCedula(void);
    void setCedula(std::string newCedula);
@@ -22,19 +27,16 @@ public:
    void setNombre(std::string newNombre);
    std::string getApellido(void);
    void setApellido(std::string newApellido);
+
+   std::string getFechaNacimiento(void);
+   
    Persona();
+   Persona(std::string cedula,std::string nombre,std::string apellido, std::string fechaNacimiento);
    ~Persona();
 
-   Registro** registro;
-   fecha** fecha;
+   //Registro** registro;
+   //fecha** fecha;
 
 protected:
-private:
-   std::string cedula;
-   std::string nombre;
-   std::string apellido;
-
 
 };
-
-#endif

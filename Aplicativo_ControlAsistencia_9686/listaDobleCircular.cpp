@@ -3,8 +3,8 @@
  * Authores:  Curso Estructuras De Datos
  * NRC: 9686
  * Created: viernes, 16 junio de 2023
- * Modified: sabado, 17 de junio de 2023 
- * Purpose: Modelado de Sistema para Control de Asistencia y su Implementacion  
+ * Modified: sábado, 17 de junio de 2023 
+ * Purpose: Modelado de Sistema para Control de Asistencia y su Implementación  
  ********************************************************************************/
 #include "listaDobleCircular.h"
 
@@ -17,6 +17,10 @@ listaDobleCircular<T>::~listaDobleCircular() {
 }
 
 template <class T>
+///////////////////////////////////////////////////////////////////////
+// Purpose: Inserta un nuevo nodo al principio de la lista
+// Return: void
+////////////////////////////////////////////////////////////////////////
 void listaDobleCircular<T>::insertar(T dato) {
     Nodo<T>* nuevoNodo = new Nodo<T>(dato);
 
@@ -36,6 +40,10 @@ void listaDobleCircular<T>::insertar(T dato) {
 
 template <class T>
 void listaDobleCircular<T>::eliminar(T dato) {
+///////////////////////////////////////////////////////////////////////
+// Purpose: Elimina un nodo que contiene el valor dado de la lista
+// Return: void
+////////////////////////////////////////////////////////////////////////
     if (primero == nullptr) {
         return;  // La lista está vacía, no hay nada que eliminar
     }
@@ -66,6 +74,10 @@ void listaDobleCircular<T>::eliminar(T dato) {
 
 template <class T>
 void listaDobleCircular<T>::imprimirDatos() {
+///////////////////////////////////////////////////////////////////////
+// Purpose: Imprime los valores almacenados en los nodos de la lista
+// Return: void
+////////////////////////////////////////////////////////////////////////
     if (primero == nullptr) {
         return;  // La lista está vacía
     }
@@ -84,6 +96,10 @@ void listaDobleCircular<T>::imprimirDatos() {
 
 template <class T>
 int listaDobleCircular<T>::cantidadNodos() const {
+///////////////////////////////////////////////////////////////////////
+// Purpose: Devuelve el número de nodos en la lista
+// Return: int
+////////////////////////////////////////////////////////////////////////
     if (primero == nullptr) {
         return 0;  // La lista está vacía
     }
@@ -94,26 +110,5 @@ int listaDobleCircular<T>::cantidadNodos() const {
     do {
         contador++;
         actual = actual->getSiguiente();
-    } while (actual != primero);
+    } while (
 
-    return contador;
-}
-
-template <class T>
-T listaDobleCircular<T>::buscarPorCedula(std::string cedula) {
-    if (primero == nullptr) {
-        return T{};  // La lista está vacía, retornar un valor por defecto del tipo T
-    }
-
-    Nodo<T>* actual = primero;
-
-    do {
-        if (actual->getDato().getCedula() == cedula) {
-            return actual->getDato();
-        }
-
-        actual = actual->getSiguiente();
-    } while (actual != primero);
-
-    return T{};  // No se encontró el dato, retornar un valor por defecto del tipo T
-}

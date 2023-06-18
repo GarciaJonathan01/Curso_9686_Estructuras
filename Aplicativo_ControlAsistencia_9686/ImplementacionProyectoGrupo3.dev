@@ -61,7 +61,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=fecha.cpp
+FileName=Fecha.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -71,7 +71,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=fecha.h
+FileName=Fecha.h
 CompileCpp=1
 Folder=
 Compile=1

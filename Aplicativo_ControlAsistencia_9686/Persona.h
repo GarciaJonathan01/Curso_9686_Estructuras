@@ -1,5 +1,5 @@
 /*********************************************************************************
- * Module:  fecha.cpp
+ * Module:  Persona.cpp
  * Authores:  Curso Estructuras De Datos
  * NRC: 9686
  * Created: viernes, 16 junio de 2023

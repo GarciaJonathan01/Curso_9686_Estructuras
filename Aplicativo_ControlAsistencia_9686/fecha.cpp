@@ -1,5 +1,5 @@
 /*********************************************************************************
- * Module:  fecha.cpp
+ * Module:  Fecha.cpp
  * Authores:  Curso Estructuras De Datos
  * NRC: 9686
  * Created: viernes, 16 junio de 2023
@@ -8,159 +8,159 @@
  ********************************************************************************/
 #include <ctime> 
 #include <locale>
-#include "fecha.h"
+#include "Fecha.h"
 
 ////////////////////////////////////////////////////////////////////////
-// Name:       fecha::getHora()
-// Purpose:    Implementation of fecha::getHora()
+// Name:       Fecha::getHora()
+// Purpose:    Implementation of Fecha::getHora()
 // Return:     int
 ////////////////////////////////////////////////////////////////////////
 
-int fecha::getHora(void)
+int Fecha::getHora(void)
 {
    return hora;
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Name:       fecha::setHora(int newHora)
-// Purpose:    Implementation of fecha::setHora()
+// Name:       Fecha::setHora(int newHora)
+// Purpose:    Implementation of Fecha::setHora()
 // Parameters:
 // - newHora
 // Return:     void
 ////////////////////////////////////////////////////////////////////////
 
-void fecha::setHora(int newHora)
+void Fecha::setHora(int newHora)
 {
    hora = newHora;
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Name:       fecha::getMinuto()
-// Purpose:    Implementation of fecha::getMinuto()
+// Name:       Fecha::getMinuto()
+// Purpose:    Implementation of Fecha::getMinuto()
 // Return:     int
 ////////////////////////////////////////////////////////////////////////
 
-int fecha::getMinuto(void)
+int Fecha::getMinuto(void)
 {
    return minuto;
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Name:       fecha::setMinuto(int newMinuto)
-// Purpose:    Implementation of fecha::setMinuto()
+// Name:       Fecha::setMinuto(int newMinuto)
+// Purpose:    Implementation of Fecha::setMinuto()
 // Parameters:
 // - newMinuto
 // Return:     void
 ////////////////////////////////////////////////////////////////////////
 
-void fecha::setMinuto(int newMinuto)
+void Fecha::setMinuto(int newMinuto)
 {
    minuto = newMinuto;
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Name:       fecha::getSegundo()
-// Purpose:    Implementation of fecha::getSegundo()
+// Name:       Fecha::getSegundo()
+// Purpose:    Implementation of Fecha::getSegundo()
 // Return:     int
 ////////////////////////////////////////////////////////////////////////
 
-int fecha::getSegundo(void)
+int Fecha::getSegundo(void)
 {
    return segundo;
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Name:       fecha::setSegundo(int newSegundo)
-// Purpose:    Implementation of fecha::setSegundo()
+// Name:       Fecha::setSegundo(int newSegundo)
+// Purpose:    Implementation of Fecha::setSegundo()
 // Parameters:
 // - newSegundo
 // Return:     void
 ////////////////////////////////////////////////////////////////////////
 
-void fecha::setSegundo(int newSegundo)
+void Fecha::setSegundo(int newSegundo)
 {
    segundo = newSegundo;
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Name:       fecha::getDia()
-// Purpose:    Implementation of fecha::getDia()
+// Name:       Fecha::getDia()
+// Purpose:    Implementation of Fecha::getDia()
 // Return:     int
 ////////////////////////////////////////////////////////////////////////
 
-int fecha::getDia(void)
+int Fecha::getDia(void)
 {
    return dia;
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Name:       fecha::setDia(int newDia)
-// Purpose:    Implementation of fecha::setDia()
+// Name:       Fecha::setDia(int newDia)
+// Purpose:    Implementation of Fecha::setDia()
 // Parameters:
 // - newDia
 // Return:     void
 ////////////////////////////////////////////////////////////////////////
 
-void fecha::setDia(int newDia)
+void Fecha::setDia(int newDia)
 {
    dia = newDia;
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Name:       fecha::getMes()
-// Purpose:    Implementation of fecha::getMes()
+// Name:       Fecha::getMes()
+// Purpose:    Implementation of Fecha::getMes()
 // Return:     int
 ////////////////////////////////////////////////////////////////////////
 
-int fecha::getMes(void)
+int Fecha::getMes(void)
 {
    return mes;
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Name:       fecha::setMes(int newMes)
-// Purpose:    Implementation of fecha::setMes()
+// Name:       Fecha::setMes(int newMes)
+// Purpose:    Implementation of Fecha::setMes()
 // Parameters:
 // - newMes
 // Return:     void
 ////////////////////////////////////////////////////////////////////////
 
-void fecha::setMes(int newMes)
+void Fecha::setMes(int newMes)
 {
    mes = newMes;
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Name:       fecha::getAnio()
-// Purpose:    Implementation of fecha::getAnio()
+// Name:       Fecha::getAnio()
+// Purpose:    Implementation of Fecha::getAnio()
 // Return:     int
 ////////////////////////////////////////////////////////////////////////
 
-int fecha::getAnio(void)
+int Fecha::getAnio(void)
 {
    return anio;
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Name:       fecha::setAnio(int newAnio)
-// Purpose:    Implementation of fecha::setAnio()
+// Name:       Fecha::setAnio(int newAnio)
+// Purpose:    Implementation of Fecha::setAnio()
 // Parameters:
 // - newAnio
 // Return:     void
 ////////////////////////////////////////////////////////////////////////
 
-void fecha::setAnio(int newAnio)
+void Fecha::setAnio(int newAnio)
 {
    anio = newAnio;
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Name:       fecha::fecha()
-// Purpose:    Implementation of fecha::fecha()
+// Name:       Fecha::Fecha()
+// Purpose:    Implementation of Fecha::Fecha()
 // Return:     
 ////////////////////////////////////////////////////////////////////////
 
-fecha::fecha()
+Fecha::Fecha()
 {
     // Establece la configuración regional en español
     setlocale(LC_ALL, "es_ES.UTF-8");
@@ -181,8 +181,8 @@ fecha::fecha()
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Name:       fecha::fecha(int anio, int mes, int dia, int hora, int minuto, int segundo)
-// Purpose:    Implementation of fecha::fecha()
+// Name:       Fecha::Fecha(int anio, int mes, int dia, int hora, int minuto, int segundo)
+// Purpose:    Implementation of Fecha::Fecha()
 // Parameters:
 // - anio
 // - mes
@@ -193,7 +193,7 @@ fecha::fecha()
 // Return:
 ////////////////////////////////////////////////////////////////////////
 
-fecha::fecha(int anio, int mes, int dia, int hora, int minuto, int segundo) {
+Fecha::Fecha(int anio, int mes, int dia, int hora, int minuto, int segundo) {
 	this->dia = dia;
 	this->mes = mes;
     this->anio = anio;
@@ -203,12 +203,25 @@ fecha::fecha(int anio, int mes, int dia, int hora, int minuto, int segundo) {
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Name:       fecha::~fecha()
+// Name:       Fecha::~Fecha()
 // Purpose:    Implementation of fecha::~fecha()
 // Return:     
 ////////////////////////////////////////////////////////////////////////
 
-fecha::~fecha()
+Fecha::~Fecha()
 {
    // TODO : implement
+}
+////////////////////////////////////////////////////////////////////////
+// Name:       operator<<
+// Purpose:    Overloaded stream insertion operator for Fecha class
+// Parameters: 
+// - os :Reference to the output stream
+// - fechaActual :Reference to the Fecha object to be output
+// Return:     Reference to the output stream
+////////////////////////////////////////////////////////////////////////
+std::ostream& operator <<(std::ostream& os, const Fecha& fechaActual){
+	os<<std::to_string(fechaActual.dia) + "/"+std::to_string(fechaActual.mes)+"/"+std::to_string(fechaActual.anio)+" - hora: "+
+	std::to_string(fechaActual.hora)+":"+std::to_string(fechaActual.minuto)+":"+std::to_string(fechaActual.segundo);
+	return os;
 }

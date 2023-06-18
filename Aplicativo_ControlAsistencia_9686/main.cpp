@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Nodo.cpp"
+#include "Fecha.h"
 #include "listaDobleCircular.cpp"
 #include "Persona.h"
 #include "OperacionesPersona.h"
@@ -7,7 +8,8 @@
 
 
 int main(int argc, char** argv) {
-	
+	Fecha fecha;
+	std::cout <<fecha<<std::endl;
 	int opc;
 	Persona personaTemp;
 	

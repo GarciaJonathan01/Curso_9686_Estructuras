@@ -1,5 +1,5 @@
 /*********************************************************************************
- * Module:  fecha.cpp
+ * Module:  Fecha.h
  * Authores:  Curso Estructuras De Datos
  * NRC: 9686
  * Created: viernes, 16 junio de 2023
@@ -7,10 +7,10 @@
  * Purpose: Modelado de Sistema para Control de Asistencia y su Implementacion  
  ********************************************************************************/
 
-#if !defined(__Class_Diagram_1_fecha_h)
-#define __Class_Diagram_1_fecha_h
-
-class fecha
+#if !defined(__Class_Diagram_1_Fecha_h)
+#define __Class_Diagram_1_Fecha_h
+#include <iostream>
+class Fecha
 {
 public:
    int getHora(void);
@@ -25,9 +25,10 @@ public:
    void setMes(int newMes);
    int getAnio(void);
    void setAnio(int newAnio);
-   fecha();
-   fecha(int, int, int, int, int, int);
-   ~fecha();
+   Fecha();
+   Fecha(int, int, int, int, int, int);
+   ~Fecha();
+   friend std::ostream& operator<<(std::ostream&, const Fecha&);
 	//void obtenerFechaDeNacimiento();
 protected:
 private:

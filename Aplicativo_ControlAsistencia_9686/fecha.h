@@ -30,6 +30,7 @@ public:
    ~Fecha();
    friend std::ostream& operator<<(std::ostream&, const Fecha&);
 	//void obtenerFechaDeNacimiento();
+	bool operator ==(const Fecha&) const;
 protected:
 private:
    int hora;

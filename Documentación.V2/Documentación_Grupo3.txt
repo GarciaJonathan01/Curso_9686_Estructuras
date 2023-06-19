@@ -1,0 +1,17 @@
+//CAMBIOS PARA DESPUÉS DESCOMENTAR:
+
+1. Persona.h -> Las clases registro, borramos fecha xq no es necesario la fecha exacta en este registro de persona.
+2. Persona.cpp -> En el constructor de persona le comentamos el registro y fecha ya que daba problemas y no nos servía de momento.
+3. Persona.h -> Se añadió nuevo atributo fechaNacimiento con sus getter and setter y constructor
+
+#Grupo 3: Insertar datos de Persona (Documentación)
+
+Clase OperacionesPersona (.h)
+* Se adjunto la librería #include <ctime> para trabajar con fechas y tiempos
+* Se realizaron tres operciones en esta clase:
+  pedirDatosPersona(): Pide los datos al usuario de la persona a registrar (nombre, apellido, cedula, fecha de nacimiento)
+  guardarPersonaEnArchivo(): Ingresa al archivo txt los datos de la persona registrada
+  cargarDatosDeArchivoEnLista(): Se encarga de extraer la información de la Persona para insertarla en la lista
+*Para la fecha de nacimiento faltan las validaciones en todos los campos(dia, mes, año) 
+Main
+* Se realizó un menú en el cual se podrá insertar a las personas

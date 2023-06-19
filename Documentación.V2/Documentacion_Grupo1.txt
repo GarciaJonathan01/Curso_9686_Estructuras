@@ -1,0 +1,12 @@
+Se añadio el menu de opciones
+se edito errores de los grupos anteriores, en la fecha, y plantillas multiples
+se corrijio el uso de librerias innecesarias
+se movio al cpp funciones mezcladas con plantillas
+Se corrijio Registro.h y registro.cpp
+Se corrijieron parametros de fecha
+Se corrijio parametros de punteros de referencia en OperacionesPersona.
+******************************************************************************
+Se añado la clase ran.h , para los cambio de colores de texto y la terminan
+se edito la clase fecha a tipo string para el manejo de fechas comparandolo con lo ingresado en la lista
+se creo la clase Utils.h para el manejo de archivos y la validacion de cedula registrada
+en el menu se añadio la opcion de registro entrada , donde en un txt se registra la cedula, fecha de nacimiento, y la hora de entrada 

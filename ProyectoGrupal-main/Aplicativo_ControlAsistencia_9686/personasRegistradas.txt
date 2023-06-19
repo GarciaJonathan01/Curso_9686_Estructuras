@@ -1,0 +1,10 @@
+Cedula:   188888888
+Nombre:   ssssss
+Apellido: sssssssss
+Fecha de Nacimiento: 03/03/2003
+---------------------------------
+Cedula:   171100293945
+Nombre:   Jhon
+Apellido: Sanchez
+Fecha de Nacimiento: 14/03/2004
+---------------------------------

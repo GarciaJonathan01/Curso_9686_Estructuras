@@ -14,3 +14,8 @@ Nombre:   sebas
 Apellido: peres
 Fecha de Nacimiento: 12/07/1996
 ---------------------------------
+Cedula:   1752997823
+Nombre:   Allan
+Apellido: Panchi
+Fecha de Nacimiento: 12/02/2000
+---------------------------------

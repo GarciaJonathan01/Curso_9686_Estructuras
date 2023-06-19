@@ -15,6 +15,7 @@ class OperacionesPersona{
 	public:
 	static Persona pedirDatosPersona();
 	static void guardarPersonaEnArchivo(Persona persona);
+    static void mostrarPersonasRegistradas();
 	
 	template <typename T>
 	static listaDobleCircular<T> cargarDatosDeArchivoEnLista(listaDobleCircular<T> personasRegistradas) {

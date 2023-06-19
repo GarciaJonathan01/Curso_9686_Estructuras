@@ -8,6 +8,7 @@ void Aplication::run()
 	Menu menu("Menu Principal");
 	menu.add(MenuItem("Registro de Nuevo Empleado.",std::bind(&Aplication::registroNuevoEmpleado,this)));
 	menu.add(MenuItem("Registro Entrada.",std::bind(&Aplication::registrarEntrada,this)));
+	menu.add(MenuItem("Mostrar personas registradas", std::bind(&Aplication::mostrarPersonasRegistradas,this)));
 	menu.run();
 
 }
@@ -26,4 +27,10 @@ void Aplication::registrarEntrada(){
 	system("pause");
 
 
+}
+
+void Aplication::mostrarPersonasRegistradas()
+{
+	operacionesPersona.mostrarPersonasRegistradas();
+	system("pause");
 }

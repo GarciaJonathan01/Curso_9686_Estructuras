@@ -8,6 +8,7 @@ public:
 	void run();
 	void registroNuevoEmpleado();
 	void registrarEntrada();
+	void mostrarPersonasRegistradas();
 
 private:
 	OperacionesPersona operacionesPersona;

@@ -94,3 +94,19 @@ void OperacionesPersona::guardarPersonaEnArchivo(Persona persona)
     
         archivo.close();
 }
+
+void OperacionesPersona::mostrarPersonasRegistradas()
+{
+    std::ifstream archivo("personasRegistradas.txt");
+        if (archivo.fail()) {
+            std::cout << "ERROR: No se pudo abrir o encontrar el archivo.\n";
+            return;
+        }
+    
+        std::string line;
+        while (std::getline(archivo, line)) {
+            std::cout << line << "\n";
+        }
+    
+        archivo.close();
+}

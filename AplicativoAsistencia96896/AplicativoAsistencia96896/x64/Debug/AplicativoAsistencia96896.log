@@ -1,6 +1,0 @@
-﻿  Aplication.cpp
-  main.cpp
-C:\Users\noobp\OneDrive\Escritorio\Segundo parcial\Estructura de datos\Deberes\AplicativoAsistencia96896\AplicativoAsistencia96896\OperacionesPersona.h(9,25): error C2011: 'OperacionesPersona': nueva definición del tipo 'class'
-C:\Users\noobp\OneDrive\Escritorio\Segundo parcial\Estructura de datos\Deberes\AplicativoAsistencia96896\AplicativoAsistencia96896\OperacionesPersona.h(9,7): message : vea la declaración de 'OperacionesPersona'
-  OperacionesPersona.cpp
-  Generando código...

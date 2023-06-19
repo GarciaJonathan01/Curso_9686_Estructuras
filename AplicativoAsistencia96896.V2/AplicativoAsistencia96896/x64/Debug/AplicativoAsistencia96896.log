@@ -1,0 +1,14 @@
+﻿  fecha.cpp
+  main.cpp
+C:\Users\EDILSON\Downloads\ProyectoGrupal-main\ProyectoGrupal-main\AplicativoAsistencia96896\AplicativoAsistencia96896\menu.cpp(156,100): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\EDILSON\Downloads\ProyectoGrupal-main\ProyectoGrupal-main\AplicativoAsistencia96896\AplicativoAsistencia96896\Utils.h(62,1): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\EDILSON\Downloads\ProyectoGrupal-main\ProyectoGrupal-main\AplicativoAsistencia96896\AplicativoAsistencia96896\registro.cpp(89,22): error C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  menu.cpp
+C:\Users\EDILSON\Downloads\ProyectoGrupal-main\ProyectoGrupal-main\AplicativoAsistencia96896\AplicativoAsistencia96896\menu.cpp(156,100): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+  PersonaRegistro.cpp
+C:\Users\EDILSON\Downloads\ProyectoGrupal-main\ProyectoGrupal-main\AplicativoAsistencia96896\AplicativoAsistencia96896\PersonaRegistro.h(13,8): error C3646: 'fechadeEntrada': especificador de invalidación desconocido
+C:\Users\EDILSON\Downloads\ProyectoGrupal-main\ProyectoGrupal-main\AplicativoAsistencia96896\AplicativoAsistencia96896\PersonaRegistro.h(13,22): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+  Registro.cpp
+C:\Users\EDILSON\Downloads\ProyectoGrupal-main\ProyectoGrupal-main\AplicativoAsistencia96896\AplicativoAsistencia96896\Utils.h(62,1): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\EDILSON\Downloads\ProyectoGrupal-main\ProyectoGrupal-main\AplicativoAsistencia96896\AplicativoAsistencia96896\Registro.cpp(89,22): error C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Generando código...
